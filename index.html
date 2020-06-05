@@ -1,148 +1,102 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<title>PQA Management</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body, h1, h2, h3, h4, h5, h6 {
-        font-family: "Lato", sans-serif;
-    }
-
-    .w3-bar, h1, button {
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .fa-users {
-        font-size: 200px;
-    }
-
-    form {
-        border: 3px solid #f1f1f1;
-    }
-
-    input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-
-    button {
-        background-color: black;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-    }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-    .container {
-        padding: 16px;
-    }
-
-    span.psw {
-        float: right;
-        padding-top: 16px;
-    }
-
-    /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
-        span.psw {
-            display: block;
-            float: none;
-        }
-
-        .cancelbtn {
-            width: 100%;
-        }
-    }
-</style>
+<head>
+    <title>revNow - Project Quality Assurance</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
 <body>
-
-    <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Schedule</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Reviews & Observations</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Reviewers</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Reports</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html"><h4>revNow</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    &nbsp;
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plan Reviews</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">PTM Dashboard</a>
+                        <a class="dropdown-item" href="#">Plan Reviews</a>
+                        <a class="dropdown-item" href="#">Manage Reviewers</a>
+                        <a class="dropdown-item" href="#">Manage Group Customers</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    &nbsp;
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white" href="#">Reviews & Observations</a>
+                </li>
+                <li class="nav-item">
+                    &nbsp;
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color:white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">PQA Summary Report</a>
+                        <a class="dropdown-item" href="#">DBI PQA Summary Trend</a>
+                        <a class="dropdown-item" href="#">Quarterly Report</a>
+                        <a class="dropdown-item" href="#">Hygiene</a>
+                        <a class="dropdown-item" href="#">Key Observations</a>
+                    </div>
+                </li>            
+            </ul>
         </div>
-
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Schedule</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Reviews & Observations</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Reviewers</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Reports</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Login</a>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-        <h1 class="w3-margin w3-jumbo">PQA Tracker</h1>
-        <p class="w3-xlarge">Schedule, Track & Report</p>
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
-    </header>
-
-    <!-- First Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-        <div class="w3-content">
-            <div class="w3-twothird">
-                <h1>Login</h1>                
-                <div>
-                    <!-- Login form -->
-                    <form action="#" method="post">
-                        <div class="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-
-                            <button type="submit">Login</button>
-
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        </div>
-                    </form>
+    </nav>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 text-center">
+                    <h1 class="display-3">revNow</h1>
+                    <p>Project Quality Assurance App</p>
+                    <p>
+                        <i class="fa fa-users" style="font-size: 110px; color: #0275d8; margin-top:30px;"></i>
+                    </p>
                 </div>
-                <!-- Login Ends -->
-            </div>
-            <div class="w3-third w3-center">
-                <i class="fa fa-users w3-padding-64 w3-text-red"></i>
+                <div class="col-sm-4">
+                    <div style="border: 2px solid white; padding: 20px; background-color:white">
+                        <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+                        <form class="form-signin">
+                            <div class="form-label-group">
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            </div>
+                            <br />
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            </div>
+                            <br />
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me 
+                                </label>
+                            </div>
+                            <button class="btn btn-medium btn-primary" type="submit">Sign in</button>
+                        </form>
+                    </div>                    
+                </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-        <p>Contact Us <a href="#" target="_blank">mail@email.com</a></p>
-    </footer>
-
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
-
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br />   
+                <p>&copy; revNow - 2020-2022.</p>             
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
